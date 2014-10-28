@@ -52,6 +52,7 @@ exports.gen_session = gen_session;
 
 // 验证用户是否登录
 exports.authUser = function (req, res, next) {
+  console.log("++++++++++++++++",req.signedCookies.sid)
   var ep = new eventproxy();
   ep.fail(next);
 
